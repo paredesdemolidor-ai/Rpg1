@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Mundo de Grimórios</title><link rel="stylesheet" href="style.css"></head><body>
+<canvas id="c"></canvas>
+<div id="title"><h1>Mundo de Grimórios</h1><div class="sub">Um RPG de mundo aberto</div><button id="tplay">Jogar</button><button id="tcont">Continuar</button><button id="tset">Configurações</button><button id="thelp">Como jogar</button><button id="tabout">Sobre</button></div>
+<div id="menu"><h1>Mundo de Grimórios</h1><div id="slots"></div>
+<div id="create" class="hide"><input id="nm" placeholder="Nome do personagem" maxlength="16">
+<select id="race"><option>Humano</option><option>Elfo</option><option>Semi-humano (coelho)</option><option>Semi-humano (serpente)</option><option>Demônio</option><option>Anjo</option></select>
+<label>Pele <input type="color" id="skin" value="#d9a77a"></label><label>Cabelo <input type="color" id="hair" value="#3a2a1a"></label>
+<label>Altura <input type="range" id="hgt" min="85" max="120" value="100"></label>
+<button id="go">Nascer no mundo</button></div>
+<div class="row"><button id="bset">Configurações</button> <button id="bback">Voltar</button></div></div>
+<div id="set" class="hide panel"><h2>Configurações</h2>
+<label><input type="checkbox" id="lite"> Modo leve (sem sombras, gráficos simples)</label>
+<label><input type="checkbox" id="third" checked> Câmera em 3ª pessoa</label>
+<h3>Sons</h3><label>Volume geral <input type="range" id="vol" min="0" max="1" step=".1" value=".5"></label><label>Música <input type="range" id="vmus" min="0" max="1" step=".1" value=".6"></label><label>Efeitos <input type="range" id="vsfx" min="0" max="1" step=".1" value="1"></label><label>Ambiente <input type="range" id="vamb" min="0" max="1" step=".1" value=".7"></label><button id="tsnd">Testar sons</button>
+<label>Opacidade dos controles <input type="range" id="op" min=".2" max="1" step=".1" value=".6"></label>
+<label><input type="checkbox" id="edit"> Mover controles na tela</label>
+<label><input type="checkbox" id="quest" checked> Mostrar missões</label>
+<label>Código de desenvolvedor <input id="dev" placeholder="código"></label>
+<div id="devp" class="hide"><button data-d="vila">Ir à vila</button><button data-d="lobo">Ir ao lobo</button><button data-d="npc">Ir a um NPC</button><button data-d="item">Receber itens</button><button data-d="tita">Pacto: Titã</button></div>
+<button id="sclose">Fechar</button></div>
+<div id="hud" class="hide"><div id="bars"></div><canvas id="mm" width="110" height="110"></canvas><div id="clk"></div><div id="qst"></div><div id="msg"></div>
+<div id="tb"><button data-p="inv">Inventário</button><button data-p="body">Corpo</button><button data-p="aff">Afinidades</button><button data-p="grim">Grimório</button><button data-p="pause">☰</button></div>
+<div id="joy" class="ctl"><i></i></div>
+<div id="btns"><button class="ctl" id="bA">Agir</button><button class="ctl" id="bX">Atacar</button><button class="ctl" id="bJ">Pular</button><button class="ctl" id="bM">Magia</button><button class="ctl" id="bT">Titã</button><button class="ctl" id="bR">Correr</button><button class="ctl" id="bS">Espírito</button></div></div>
+<div id="info" class="hide panel"><div id="itxt"></div><button id="iclose">Fechar</button></div>
+<div id="pan" class="hide panel"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="game.js"></script><script src="grimorio.js"></script><script src="espiritos.js"></script><script src="racas.js"></script><script src="economia.js"></script><script src="monstros.js"></script><script src="mar.js"></script><script src="visuais.js"></script><script src="menu.js"></script><script src="interface.js"></script><script src="multi.js"></script><script src="multisync.js"></script></body></html>
